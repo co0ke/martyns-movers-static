@@ -1,0 +1,648 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+    .ir:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+    /*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* additional */
+/* blue: 2a2957  font-blue: 1b1a47 */
+
+@font-face {
+    font-family: 'Oxygen-Regular';
+    src: url('../fonts/Oxygen-Regular.eot');
+    src: url('../fonts/Oxygen-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Oxygen-Regular.woff') format('woff'), url('../fonts/Oxygen-Regular.ttf') format('truetype'), url('../fonts/Oxygen-Regular.svg#Oxygen-Regular') format('svg');
+}
+
+@font-face {
+    font-family: 'Oxygen-Bold';
+    src: url('../fonts/Oxygen-Bold.eot');
+    src: url('../fonts/Oxygen-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Oxygen-Bold.woff') format('woff'), url('../fonts/Oxygen-Bold.ttf') format('truetype'), url('../fonts/Oxygen-Bold.svg#Oxygen-Regular') format('svg');
+}
+
+/*.fontpro,.fontpro-35529 {
+  font-family: 'Oxygen-Regular',sans-serif;
+}*/
+
+h1, h2, h3, strong {
+    font-family: 'Oxygen-Bold';
+}
+
+    h2.underline,
+    h3.underline {
+        border-bottom: 1px dashed;
+        padding-bottom: 6px;
+    }
+
+body {
+    font-family: 'Oxygen-Regular';
+    color: #1b1a47;
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    position: relative;
+}
+
+header, footer {
+    background: #2a2957;
+    color: #fff;
+}
+
+    header a {
+        color: #fff;
+    }
+
+    header h1 {
+        margin: 0 230px 0 0;
+        padding: 5px 0;
+        color: #fff;
+    }
+
+        header h1 em {
+            font-size: 55px;
+            font-style: normal;
+        }
+
+        header h1 span {
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+    header img.logo {
+        width: 195px;
+        height: auto;
+        position: absolute;
+        top: 19px;
+        right: 20px;
+        z-index: 20;
+        box-shadow: 0px 0px 1px 1px #2a2957;
+        background: #fff;
+        padding: 3px;
+    }
+
+    header.double-line img.logo {
+        right: 0;
+        top: 10px;
+        border: 3px double #2a2957;
+    }
+
+.intro {
+    /*margin-top:20px;*/
+    position: relative;
+    z-index: 2;
+}
+
+    .intro .left-text {
+        width: 500px;
+    }
+
+        .intro .left-text p {
+            float: left;
+            margin-right: 20px;
+        }
+
+img.van {
+    float: right;
+    margin: 0 0 0 20px;
+    height: auto;
+    width: 50%;
+    box-shadow: 0px 0px 1px 0px #2a2957;
+}
+
+.services {
+    margin-top: 20px;
+    background: #f0f0f0;
+    padding: 10px 15px;
+    border: 1px dashed #ccc;
+}
+
+    .services h2 {
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
+
+    .services ul {
+        padding: 0 5%;
+        margin: 10px 0;
+    }
+
+        .services ul li {
+            width: 29%;
+            float: left;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            list-style-type: none;
+            background: url(../img/tick.png) no-repeat 0px 3px;
+        }
+
+.contact > .left {
+    width: 50%;
+    float: left;
+}
+
+.contact a.facebook,
+.contact a.twitter {
+    display: inline-block;
+    padding: 5px 0 5px 32px;
+}
+
+.contact a.twitter {
+    background: url(../img/twitter_icon.png) no-repeat 0 4px;
+}
+
+.contact a.facebook {
+    background: url(../img/fb_icon.png) no-repeat 0 4px;
+}
+
+.contact > .right {
+    width: 50%;
+    float: right;
+}
+
+.contact label {
+    display: inline-block;
+}
+
+.contact input[type="text"] {
+    width: 100%;
+}
+
+.contact textarea {
+    height: 200px;
+    width: 100%;
+}
+
+.contact > .right div {
+    margin-bottom: 10px;
+}
+
+.contact > .left p {
+    margin-top: 0px;
+}
+
+.contact input[type="submit"] {
+    background: #2a2957;
+    border: 0;
+    padding: 5px 15px;
+    color: #fff;
+    font-family: 'Oxygen-Regular';
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #fff;
+    min-height: 40px;
+    padding: 1px 0;
+}
+
+    footer ul {
+        list-style-type: none;
+        margin: 2px 0;
+    }
+
+
+
+@media screen and (max-width: 980px) {
+    section.main, .wrapper {
+        width: 95%;
+    }
+
+    .services ul li {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .contact > .left {
+        float: none;
+        width: 100%;
+    }
+
+    .contact > .right {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* details splits to 2 columns */
+    .contact > .left > .left {
+        width: 49%;
+        float: left;
+    }
+
+    .contact > .left > .right {
+        width: 49%;
+        float: right;
+    }
+}
+/* end @media screen and (max-width: 768px) */
+
+
+@media screen and (max-width: 700px) {
+
+    img.van {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin: 0 0 20px 0;
+    }
+
+    header {
+        padding-top: 10px;
+    }
+
+    header h1 {
+        margin: 0;
+        padding: 0 0 4px 0;
+        text-align: center;
+    }
+
+    header h1 span {
+        display: inline-block;
+    }
+
+    header img.logo {
+        display: block;
+        position: relative;
+        width: 80px;
+        top: auto;
+        right: auto;
+        margin: 0px auto;
+        z-index: 20;
+        border: 3px double #2a2957;
+    }
+}
+/* end @media screen and (max-width: 700px) */
+
+
+@media screen and (max-width: 600px) {
+
+    .services ul li {
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 5px;
+    }
+}
+/* @media screen and (min-width: 600px) */
+
+@media screen and (max-width: 520px) {
+
+
+    /* details back to 1 column */
+    .contact > .left > .left {
+        width: auto;
+        float: none;
+    }
+
+    .contact > .left > .right {
+        width: auto;
+        float: none;
+    }
+}
+/* @media screen and (min-width: 520px) */
+
+
+@media screen and (max-width: 380px) {
+
+
+    header h1 {
+        font-size: 22px;
+    }
+
+        header h1 em {
+            font-size: 45px;
+        }
+
+        header h1 span {
+            font-size: 14px;
+        }
+}
+/* @media screen and (min-width: 380px) */
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    font-family: 'Oxygen-Regular';
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    min-height: 35px;
+    padding: 5px;
+}
+
+form button {
+    background: #2a2957;
+    color: #fff;
+    padding: 10px;
+    border: 0;
+    font-family: Oxygen-Bold, Geneva, sans-serif;
+    margin-right: 5px;
+}
+
+.input-validation-error {
+    border: 1px solid #cc3a3a;
+    outline-color: #cc3a3a;
+}
